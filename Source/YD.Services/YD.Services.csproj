@@ -40,7 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsoleLoggingService.cs" />
+    <Compile Include="ConsoleProgressBarService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YD.Services.Abstraction\YD.Services.Abstraction.csproj">
+      <Project>{F5C1CC5D-BAC4-4F8C-AD85-AF6780409712}</Project>
+      <Name>YD.Services.Abstraction</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -49,5 +49,19 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YD.Core\YD.Core.csproj">
+      <Project>{FE8AF5AB-0777-41D0-AE12-366C9604EB4D}</Project>
+      <Name>YD.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YD.Services.Abstraction\YD.Services.Abstraction.csproj">
+      <Project>{F5C1CC5D-BAC4-4F8C-AD85-AF6780409712}</Project>
+      <Name>YD.Services.Abstraction</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YD.Services\YD.Services.csproj">
+      <Project>{F9FA4E79-AF9A-4A15-A600-E1DB3CEED20E}</Project>
+      <Name>YD.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

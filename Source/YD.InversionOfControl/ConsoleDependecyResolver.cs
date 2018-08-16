@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using YD.Core;
+using YD.Services;
+using YD.Services.Abstraction;
 
 namespace YD.InversionOfControl
 {
@@ -29,19 +32,11 @@ namespace YD.InversionOfControl
 
         private void ConfigureContainer(IKernel container)
         {
-            //// Logging
-            //container.Bind<ILoggingService>().To<ConsoleLoggingService>();
+            //Core
+            container.Bind<Engine>().ToSelf().InSingletonScope();
 
-            //// Services
-            //container.Bind<IConversationService>().To<ConversationService>();
-            //container.Bind<IConversationConfiguration>().To<ConversationConfiguration>();
-            //container.Bind<IEmotionAnalysisService>().To<EmotionAnalysisService>();
-
-            //// Data
-            //container.Bind<IAIDataUnitOfWork>().To<FakeDataUnitOfWork>().InSingletonScope();
-            //container.Bind<IConversationRepository>().To<TempConversationRepository>().InSingletonScope();
-            //container.Bind<IUtteranceRepository>().To<TempUtteranceRepository>().InSingletonScope();
-            //container.Bind<IParticipantRepository>().To<TempParticipantRepository>().InSingletonScope();
+            // Services
+            container.Bind<ILoggingService>().To<ConsoleLoggingService>().InSingletonScope();
         }
     }
 }
