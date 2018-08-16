@@ -14,7 +14,18 @@ namespace YD.ConsoleClient
         {
             var resolver = new ConsoleDependecyResolver();
             var engine = resolver.Create<Engine>();
-            engine.Start();
+
+            var configuration = new ConsoleConfiguration();
+            var commandsRegister = new ConsoleCommandRegister();
+
+            engine.ExecuteOnStartup(configuration.OnStartup)
+                .ExecuteOnExit(configuration.OnExit)
+                .Start(commandsRegister, true);
+
+            while (true)
+            {
+                engine.ProcessInput(Console.ReadLine());
+            }
         }
     }
 }

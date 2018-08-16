@@ -44,6 +44,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\YD.Common\YD.Common.csproj">
+      <Project>{71952986-FE63-45FF-A7F5-0BFA58E1C5EB}</Project>
+      <Name>YD.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\YD.Services.Abstraction\YD.Services.Abstraction.csproj">
       <Project>{F5C1CC5D-BAC4-4F8C-AD85-AF6780409712}</Project>
       <Name>YD.Services.Abstraction</Name>

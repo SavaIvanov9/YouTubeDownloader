@@ -40,6 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\ICommandRegister.cs" />
+    <Compile Include="Contracts\IEngineCommand.cs" />
+    <Compile Include="Enums\EngineCommandType.cs" />
+    <Compile Include="Exceptions\CommandNotImplementedException.cs" />
+    <Compile Include="Exceptions\CustomException.cs" />
+    <Compile Include="Models\BaseCommandRegister.cs" />
+    <Compile Include="Models\EngineCommandInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -4,9 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using YD.Common.Contracts;
 using YD.Core;
 using YD.Services;
 using YD.Services.Abstraction;
+using YD.Services.Abstraction.CommandProcessing;
+using YD.Services.Abstraction.UI;
+using YD.Services.CommandProcessing;
+using YD.Services.UI;
 
 namespace YD.InversionOfControl
 {
@@ -36,7 +41,9 @@ namespace YD.InversionOfControl
             container.Bind<Engine>().ToSelf().InSingletonScope();
 
             // Services
-            container.Bind<ILoggingService>().To<ConsoleLoggingService>().InSingletonScope();
+            container.Bind<IUIService>().To<ConsoleUIService>().InSingletonScope();
+            container.Bind<ICommandProcessingService>().To<CommandProcessingService>();
+            container.Bind<ICommandFactoryService>().To<CommandFactoryService>();
         }
     }
 }

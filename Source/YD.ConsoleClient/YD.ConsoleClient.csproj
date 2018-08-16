@@ -42,6 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsoleCommandRegister.cs" />
+    <Compile Include="ConsoleConfiguration.cs" />
     <Compile Include="Launcher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -49,6 +51,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\YD.Common\YD.Common.csproj">
+      <Project>{71952986-FE63-45FF-A7F5-0BFA58E1C5EB}</Project>
+      <Name>YD.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\YD.Core\YD.Core.csproj">
       <Project>{FE8AF5AB-0777-41D0-AE12-366C9604EB4D}</Project>
       <Name>YD.Core</Name>

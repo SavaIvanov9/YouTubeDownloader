@@ -40,9 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ICustomProgressBarService.cs" />
-    <Compile Include="ILoggingService.cs" />
+    <Compile Include="CommandProcessing\ICommandFactoryService.cs" />
+    <Compile Include="CommandProcessing\ICommandProcessingService.cs" />
+    <Compile Include="UI\ICustomProgressBarService.cs" />
+    <Compile Include="UI\IUIService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YD.Common\YD.Common.csproj">
+      <Project>{71952986-FE63-45FF-A7F5-0BFA58E1C5EB}</Project>
+      <Name>YD.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
