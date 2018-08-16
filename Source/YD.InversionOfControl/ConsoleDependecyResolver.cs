@@ -1,10 +1,5 @@
 ﻿using Ninject;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using YD.Common.Contracts;
 using YD.Core;
 using YD.Services;
 using YD.Services.Abstraction;
@@ -44,6 +39,7 @@ namespace YD.InversionOfControl
             container.Bind<IUIService>().To<ConsoleUIService>().InSingletonScope();
             container.Bind<ICommandProcessingService>().To<CommandProcessingService>();
             container.Bind<ICommandFactoryService>().To<CommandFactoryService>();
+            container.Bind<IErrorLoggingService>().To<ErrorLoggingService>();
         }
     }
 }

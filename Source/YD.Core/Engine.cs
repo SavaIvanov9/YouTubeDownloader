@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using YD.Common.Contracts;
 using YD.Common.Exceptions;
+using YD.Common.Models;
 using YD.Services.Abstraction;
 using YD.Services.Abstraction.CommandProcessing;
 using YD.Services.Abstraction.UI;
@@ -15,7 +15,7 @@ namespace YD.Core
     {
         private readonly IUIService uiService;
         private readonly ICommandProcessingService commandProcessor;
-        //private readonly IErrorLogger errorLogger;
+        private readonly IErrorLoggingService errorLogger;
 
         private Action executeOnStartup;
         private Action executeOnExit;
@@ -28,13 +28,12 @@ namespace YD.Core
 
         public Engine(
             IUIService uiService,
-            ICommandProcessingService commandProcessor
-            //IErrorLogger errorLogger,
-            )
+            ICommandProcessingService commandProcessor,
+            IErrorLoggingService errorLogger)
         {
             this.uiService = uiService;
             this.commandProcessor = commandProcessor;
-            //this.errorLogger = errorLogger;
+            this.errorLogger = errorLogger;
             
             isStarted = false;
             isWorkingAsync = false;
@@ -75,7 +74,7 @@ namespace YD.Core
 
         public void Start(ICommandRegister commandRegister, bool isErrorLoggingOn = false)
         {
-            //errorLogger.IsEnabled = isErrorLoggingOn;
+            errorLogger.IsEnabled = isErrorLoggingOn;
 
             if (!isStarted)
             {
@@ -150,11 +149,11 @@ namespace YD.Core
             {
                 uiService.WriteOutput($"Error occured: {ex.Message}", false);
 
-                //if (errorLogger.IsEnabled)
-                //{
-                //    var logName = errorLogger.LogError(new ErrorDto { Exception = ex });
-                //    communicator.SendOutput($"Error log created: {logName}");
-                //}
+                if (errorLogger.IsEnabled)
+                {
+                    var logName = errorLogger.LogError(new Error { Exception = ex });
+                    uiService.WriteOutput($"Error log created: {logName}");
+                }
             }
         }
 

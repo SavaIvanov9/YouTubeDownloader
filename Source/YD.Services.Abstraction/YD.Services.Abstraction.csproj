@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="CommandProcessing\ICommandFactoryService.cs" />
     <Compile Include="CommandProcessing\ICommandProcessingService.cs" />
+    <Compile Include="IErrorLoggingService.cs" />
     <Compile Include="UI\ICustomProgressBarService.cs" />
     <Compile Include="UI\IUIService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
