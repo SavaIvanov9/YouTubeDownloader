@@ -1,12 +1,13 @@
 ﻿using Ninject;
 using System;
+using VA.Services.FileConverting;
 using YD.Core;
-using YD.Services;
 using YD.Services.Abstraction;
 using YD.Services.Abstraction.CommandProcessing;
 using YD.Services.Abstraction.UI;
-using YD.Services.CommandProcessing;
-using YD.Services.UI;
+using YD.Services.ConsoleUI;
+using YD.Services.Core;
+using YD.Services.ErrorLogging;
 
 namespace YD.InversionOfControl
 {
@@ -40,6 +41,7 @@ namespace YD.InversionOfControl
             container.Bind<ICommandProcessingService>().To<CommandProcessingService>();
             container.Bind<ICommandFactoryService>().To<CommandFactoryService>();
             container.Bind<IErrorLoggingService>().To<ErrorLoggingService>();
+            container.Bind<IMp3ConverterService>().To<FFMpegFormatConvertingServices>();
         }
     }
 }

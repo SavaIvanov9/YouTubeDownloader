@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using YD.Services.Abstraction.UI;
 
-namespace YD.Services.UI
+namespace YD.Services.ConsoleUI
 {
     public class ConsoleUIService : IUIService
     {

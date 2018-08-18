@@ -1,7 +1,7 @@
 ﻿using System;
 using YD.Services.Abstraction.UI;
 
-namespace YD.Services.UI
+namespace YD.Services.ConsoleUI
 {
     internal class ConsoleProgressBarService : ICustomProgressBarService
     {

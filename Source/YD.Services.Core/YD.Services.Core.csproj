@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FD6629E2-FE61-4745-9F42-FD124967F501}</ProjectGuid>
+    <ProjectGuid>{EED7FE1F-7E1C-4D0E-A4A4-95BC584E2E59}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>YD.InversionOfControl</RootNamespace>
-    <AssemblyName>YD.InversionOfControl</AssemblyName>
+    <RootNamespace>YD.Services.Core</RootNamespace>
+    <AssemblyName>YD.Services.Core</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,9 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,40 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsoleDependecyResolver.cs" />
+    <Compile Include="CommandFactoryService.cs" />
+    <Compile Include="CommandProcessingService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\VA.Services.FileConverting\VA.Services.FileConverting.csproj">
-      <Project>{E691A33B-B059-41A5-A9B6-445AFF114377}</Project>
-      <Name>VA.Services.FileConverting</Name>
-    </ProjectReference>
     <ProjectReference Include="..\YD.Common\YD.Common.csproj">
       <Project>{71952986-FE63-45FF-A7F5-0BFA58E1C5EB}</Project>
       <Name>YD.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\YD.Core\YD.Core.csproj">
-      <Project>{FE8AF5AB-0777-41D0-AE12-366C9604EB4D}</Project>
-      <Name>YD.Core</Name>
-    </ProjectReference>
     <ProjectReference Include="..\YD.Services.Abstraction\YD.Services.Abstraction.csproj">
       <Project>{F5C1CC5D-BAC4-4F8C-AD85-AF6780409712}</Project>
       <Name>YD.Services.Abstraction</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\YD.Services.ConsoleUI\YD.Services.ConsoleUI.csproj">
-      <Project>{90059012-889C-4014-B8BC-75C547637A2E}</Project>
-      <Name>YD.Services.ConsoleUI</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\YD.Services.Core\YD.Services.Core.csproj">
-      <Project>{EED7FE1F-7E1C-4D0E-A4A4-95BC584E2E59}</Project>
-      <Name>YD.Services.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\YD.Services.ErrorLogging\YD.Services.ErrorLogging.csproj">
-      <Project>{A3524C7B-8F31-4908-A9E0-4EECD47944C3}</Project>
-      <Name>YD.Services.ErrorLogging</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

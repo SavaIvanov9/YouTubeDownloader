@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using YD.Common.Contracts;
 using YD.Services.Abstraction.CommandProcessing;
 using YD.Services.Abstraction.UI;
 
-namespace YD.Services.CommandProcessing
+namespace YD.Services.Core
 {
     public class CommandProcessingService : ICommandProcessingService
     {

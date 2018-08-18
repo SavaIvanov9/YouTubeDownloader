@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
 using YD.Common.Models;
 using YD.Services.Abstraction;
 
-namespace YD.Services
+namespace YD.Services.ErrorLogging
 {
     public class ErrorLoggingService : IErrorLoggingService
     {
