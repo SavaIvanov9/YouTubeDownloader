@@ -3,7 +3,8 @@ using YD.Services.Abstraction.UI;
 
 namespace YD.Services.ConsoleUI
 {
-    internal class ConsoleProgressBarService : ICustomProgressBarService
+    [Serializable]
+    public class ConsoleProgressBarService : ICustomProgressBarService
     {
         private const int MaxBars = 25;
 

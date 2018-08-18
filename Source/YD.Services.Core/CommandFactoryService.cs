@@ -3,16 +3,19 @@ using YD.Common.Contracts;
 using YD.Common.Enums;
 using YD.Common.Exceptions;
 using YD.Services.Abstraction.CommandProcessing;
+using YD.Services.Abstraction.Youtube;
 
 namespace YD.Services.Core
 {
     public class CommandFactoryService : ICommandFactoryService
     {
-        private readonly Func<Type, IEngineCommand> commandBuilder;
+        //private readonly Func<Type, IEngineCommand> commandBuilder;
+        private readonly IYouTubeDownloadVideosService youTubeDownloadVideosService;
         private ICommandRegister register;
 
-        public CommandFactoryService()
+        public CommandFactoryService(IYouTubeDownloadVideosService youTubeDownloadVideosService)
         {
+            this.youTubeDownloadVideosService = youTubeDownloadVideosService;
         }
 
         public ICommandRegister Register
@@ -44,8 +47,8 @@ namespace YD.Services.Core
 
             switch (commandInfo.CommanType)
             {
-                case EngineCommandType.DownloadVideo:
-                    return null;
+                case EngineCommandType.DownloadVideos:
+                    return (IEngineCommand)youTubeDownloadVideosService.Clone();
                 case EngineCommandType.DownloadPlaylist:
                     return null;
                 default:

@@ -78,6 +78,10 @@
       <Project>{A3524C7B-8F31-4908-A9E0-4EECD47944C3}</Project>
       <Name>YD.Services.ErrorLogging</Name>
     </ProjectReference>
+    <ProjectReference Include="..\YD.Services.Youtube\YD.Services.Youtube.csproj">
+      <Project>{103F600E-7C99-4F44-9F12-4D73E8BB254A}</Project>
+      <Name>YD.Services.Youtube</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

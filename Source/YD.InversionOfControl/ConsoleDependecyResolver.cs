@@ -8,6 +8,8 @@ using YD.Services.Abstraction.UI;
 using YD.Services.ConsoleUI;
 using YD.Services.Core;
 using YD.Services.ErrorLogging;
+using YD.Services.Abstraction.Youtube;
+using YD.Services.Youtube;
 
 namespace YD.InversionOfControl
 {
@@ -37,11 +39,23 @@ namespace YD.InversionOfControl
             container.Bind<Engine>().ToSelf().InSingletonScope();
 
             // Services
+
+            // - UI
             container.Bind<IUIService>().To<ConsoleUIService>().InSingletonScope();
+            container.Bind<ICustomProgressBarService>().To<ConsoleProgressBarService>().InSingletonScope();
+
+            // - Core
             container.Bind<ICommandProcessingService>().To<CommandProcessingService>();
             container.Bind<ICommandFactoryService>().To<CommandFactoryService>();
+
+            // - ErrorLogging
             container.Bind<IErrorLoggingService>().To<ErrorLoggingService>();
+
+            // - FileConverting
             container.Bind<IMp3ConverterService>().To<FFMpegFormatConvertingServices>();
+
+            // - Youtube
+            container.Bind<IYouTubeDownloadVideosService>().To<YouTubeDownloadVideosService>();
         }
     }
 }

@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using YD.Common.Contracts;
+﻿using YD.Common.Contracts;
+using YD.Common.Enums;
 using YD.Common.Models;
 
 namespace YD.ConsoleClient
@@ -12,6 +8,14 @@ namespace YD.ConsoleClient
     {
         protected override void LoadCommands()
         {
+            Commands.Add("dv", new EngineCommandInfo<IEngineCommand>
+            {
+                Name = "Youtube files download",
+                CommandFormat = "[selector] [parameter]",
+                CommanType = EngineCommandType.DownloadVideos,
+                CommandDescription =
+                        @"Download videos from youtube. Store the links in ""youtube-links-to-download.txt"" each on new row. Files will be stored in ""downloaded-files"" folder. Add ""-mp3"" as optional parameter to convert output in mp3 format. Add ""-init"" as optional parameter to initialize input file.",
+            });
         }
     }
 }

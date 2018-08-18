@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace YD.Common.Enums
+namespace YD.Services.Abstraction.Youtube
 {
-    public enum EngineCommandType
+    public interface IYouTubeDownloadVideosService : ICloneable
     {
-        DownloadVideos,
-        DownloadPlaylist
     }
 }

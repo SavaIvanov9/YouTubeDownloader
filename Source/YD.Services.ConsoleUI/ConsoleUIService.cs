@@ -5,9 +5,11 @@ using YD.Services.Abstraction.UI;
 
 namespace YD.Services.ConsoleUI
 {
+    [Serializable]
     public class ConsoleUIService : IUIService
     {
         private static readonly object ConsoleLock = new object();
+
         public void RenderScreen(StringBuilder screen)
         {
             Console.Clear();
@@ -36,6 +38,26 @@ namespace YD.Services.ConsoleUI
 
                 if (addEmptyLine)
                     Console.WriteLine(string.Empty);
+            }
+        }
+
+        public void WriteHeader(string input, bool addNewLine = false)
+        {
+            lock (ConsoleLock)
+            {
+                var color = Console.ForegroundColor;
+                Console.ForegroundColor = ConsoleColor.Yellow;
+
+                if (addNewLine)
+                {
+                    Console.WriteLine($"{input}{Environment.NewLine}");
+                }
+                else
+                {
+                    Console.WriteLine(input);
+                }
+
+                Console.ForegroundColor = color;
             }
         }
     }

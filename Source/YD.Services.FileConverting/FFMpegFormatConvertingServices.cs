@@ -1,9 +1,11 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.IO;
 using YD.Services.Abstraction;
 
 namespace YD.Services.FileConverting
 {
+    [Serializable]
     public class FFMpegFormatConvertingServices : IMp3ConverterService
     {
         public void InstallFFMpeg()

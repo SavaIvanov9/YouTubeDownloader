@@ -13,7 +13,8 @@ using YoutubeExplode.Models.MediaStreams;
 
 namespace YD.Services.Youtube
 {
-    public abstract class BaseYoutubeDownloadService
+    [Serializable]
+    public abstract class BaseYoutubeDownloadService : ICloneable
     {
         protected readonly IUIService uiService;
         private readonly IMp3ConverterService mp3ConverterService;
@@ -147,6 +148,11 @@ namespace YD.Services.Youtube
                 .GetResult();
 
             return (video, streamInfo);
+        }
+
+        public object Clone()
+        {
+            return this.DeepClone();
         }
     }
 }

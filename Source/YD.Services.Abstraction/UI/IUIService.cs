@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace YD.Services.Abstraction.UI
 {
@@ -10,6 +7,7 @@ namespace YD.Services.Abstraction.UI
     {
         void WriteOutput(string output, bool addEmptyLine = true);
         void WriteOutput(IEnumerable<string> output, bool addEmptyLine = true);
+        void WriteHeader(string input, bool addNewLine = false);
         void RenderScreen(StringBuilder screen);
     }
 }
