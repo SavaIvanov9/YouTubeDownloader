@@ -50,9 +50,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\VA.Services.FileConverting\VA.Services.FileConverting.csproj">
+    <ProjectReference Include="..\YD.Services.FileConverting\YD.Services.FileConverting.csproj">
       <Project>{E691A33B-B059-41A5-A9B6-445AFF114377}</Project>
-      <Name>VA.Services.FileConverting</Name>
+      <Name>YD.Services.FileConverting</Name>
     </ProjectReference>
     <ProjectReference Include="..\YD.Common\YD.Common.csproj">
       <Project>{71952986-FE63-45FF-A7F5-0BFA58E1C5EB}</Project>

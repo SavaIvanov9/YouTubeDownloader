@@ -11,7 +11,7 @@ using YoutubeExplode;
 using YoutubeExplode.Models;
 using YoutubeExplode.Models.MediaStreams;
 
-namespace VA.Services.Youtube
+namespace YD.Services.Youtube
 {
     public abstract class BaseYoutubeDownloadService
     {

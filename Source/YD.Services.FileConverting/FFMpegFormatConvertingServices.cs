@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using YD.Services.Abstraction;
 
-namespace VA.Services.FileConverting
+namespace YD.Services.FileConverting
 {
     public class FFMpegFormatConvertingServices : IMp3ConverterService
     {
         public void InstallFFMpeg()
         {
-            InstallBinaryFile("avcodec-58.dll", Properties.Resources.avcodec_58);
+            InstallBinaryFile("avcodec-58.dll", YD.Services.FileConverting.Properties.Resources.avcodec_58);
             InstallBinaryFile("avdevice-58.dll", Properties.Resources.avdevice_58);
             InstallBinaryFile("avfilter-7.dll", Properties.Resources.avfilter_7);
             InstallBinaryFile("avformat-58.dll", Properties.Resources.avformat_58);

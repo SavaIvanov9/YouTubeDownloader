@@ -19,9 +19,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YD.InversionOfControl", "YD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YD.Services.Abstraction", "YD.Services.Abstraction\YD.Services.Abstraction.csproj", "{F5C1CC5D-BAC4-4F8C-AD85-AF6780409712}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VA.Services.Youtube", "VA.Services.Youtube\VA.Services.Youtube.csproj", "{103F600E-7C99-4F44-9F12-4D73E8BB254A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YD.Services.Youtube", "YD.Services.Youtube\YD.Services.Youtube.csproj", "{103F600E-7C99-4F44-9F12-4D73E8BB254A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VA.Services.FileConverting", "VA.Services.FileConverting\VA.Services.FileConverting.csproj", "{E691A33B-B059-41A5-A9B6-445AFF114377}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YD.Services.FileConverting", "YD.Services.FileConverting\YD.Services.FileConverting.csproj", "{E691A33B-B059-41A5-A9B6-445AFF114377}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YD.Services.ConsoleUI", "YD.Services.ConsoleUI\YD.Services.ConsoleUI.csproj", "{90059012-889C-4014-B8BC-75C547637A2E}"
 EndProject

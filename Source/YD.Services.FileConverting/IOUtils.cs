@@ -2,7 +2,7 @@
 using System.IO;
 using System.Reflection;
 
-namespace VA.Services.FileConverting
+namespace YD.Services.FileConverting
 {
     public class IOUtils
     {
