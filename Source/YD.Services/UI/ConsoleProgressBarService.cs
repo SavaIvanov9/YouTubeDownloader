@@ -16,6 +16,11 @@ namespace YD.Services.UI
             Initialize();
         }
 
+        public ICustomProgressBarService CreateProgressBar()
+        {
+            return new ConsoleProgressBarService();
+        }
+
         public void Report(double value)
         {
             _progress = value;

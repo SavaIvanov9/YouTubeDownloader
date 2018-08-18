@@ -30,6 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AngleSharp, Version=0.9.9.0, Culture=neutral, PublicKeyToken=e83494dcdc6d31ea, processorArchitecture=MSIL">
+      <HintPath>..\packages\AngleSharp.0.9.9.1\lib\net45\AngleSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,6 +49,7 @@
     <Compile Include="CommandProcessing\ICommandFactoryService.cs" />
     <Compile Include="CommandProcessing\ICommandProcessingService.cs" />
     <Compile Include="IErrorLoggingService.cs" />
+    <Compile Include="IMp3ConverterService.cs" />
     <Compile Include="UI\ICustomProgressBarService.cs" />
     <Compile Include="UI\IUIService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -52,6 +59,9 @@
       <Project>{71952986-FE63-45FF-A7F5-0BFA58E1C5EB}</Project>
       <Name>YD.Common</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

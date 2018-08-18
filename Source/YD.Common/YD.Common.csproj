@@ -45,6 +45,7 @@
     <Compile Include="Enums\EngineCommandType.cs" />
     <Compile Include="Exceptions\CommandNotImplementedException.cs" />
     <Compile Include="Exceptions\CustomException.cs" />
+    <Compile Include="Extentions\StringExtentions.cs" />
     <Compile Include="Models\BaseCommandRegister.cs" />
     <Compile Include="Models\EngineCommandInfo.cs" />
     <Compile Include="Models\Error.cs" />
