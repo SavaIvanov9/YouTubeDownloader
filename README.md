@@ -11,6 +11,6 @@ shiny desktop, web and mobile versions.
 Download multiple videos from youtube. Store the links in "youtube-links-to-download.txt" each on new row. Files will be stored in 
 "downloaded-files" folder. Add "-mp3" as optional parameter to convert output in mp3 format. Add "-init" as optional parameter to initialize input file.
 
-### -Download whole playlists
+### -Download playlists
 Download videos from multiple playlists in youtube. Store the links of playlists in "youtube-playlists-to-download.txt" each on new row. Files
 will be saved in "downloaded-playlists" folder. Add "-mp3" as optional parameter to convert output in mp3 format. Add "-init" as optional parameter to initialize input file.
