@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using YD.Common.Contracts;
+﻿using YD.Common.Contracts;
 using YD.Common.Enums;
 
 namespace YD.Common.Models
@@ -17,7 +12,5 @@ namespace YD.Common.Models
         public string CommandDescription { get; set; }
 
         public string CommandFormat { get; set; }
-
-        //public Func<T> Create { get; set; }
     }
 }

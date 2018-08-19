@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace YD.ConsoleClient
 {
@@ -16,9 +12,6 @@ namespace YD.ConsoleClient
         }
 
         public bool IsRunning => isRunning;
-        //{
-        //    get { return isRunning; }
-        //}
 
         public void OnStartup()
         {
@@ -39,7 +32,6 @@ namespace YD.ConsoleClient
             Console.WriteLine("Youtube downloader terminated.", false);
             Console.WriteLine("Press any key to exit...", false);
             Console.ReadKey();
-            //Environment.Exit(0);
             isRunning = false;
         }
     }

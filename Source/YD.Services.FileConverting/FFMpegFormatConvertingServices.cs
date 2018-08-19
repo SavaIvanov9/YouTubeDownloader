@@ -10,7 +10,7 @@ namespace YD.Services.FileConverting
     {
         public void InstallFFMpeg()
         {
-            InstallBinaryFile("avcodec-58.dll", YD.Services.FileConverting.Properties.Resources.avcodec_58);
+            InstallBinaryFile("avcodec-58.dll", Properties.Resources.avcodec_58);
             InstallBinaryFile("avdevice-58.dll", Properties.Resources.avdevice_58);
             InstallBinaryFile("avfilter-7.dll", Properties.Resources.avfilter_7);
             InstallBinaryFile("avformat-58.dll", Properties.Resources.avformat_58);
