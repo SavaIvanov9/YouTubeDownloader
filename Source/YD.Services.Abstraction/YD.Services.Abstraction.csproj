@@ -53,6 +53,7 @@
     <Compile Include="UI\ICustomProgressBarService.cs" />
     <Compile Include="UI\IUIService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Youtube\IYouTubeDownloadPlayListsService.cs" />
     <Compile Include="Youtube\IYouTubeDownloadVideosService.cs" />
   </ItemGroup>
   <ItemGroup>

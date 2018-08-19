@@ -56,6 +56,7 @@ namespace YD.InversionOfControl
 
             // - Youtube
             container.Bind<IYouTubeDownloadVideosService>().To<YouTubeDownloadVideosService>();
+            container.Bind<IYouTubeDownloadPlayListsService>().To<YouTubeDownloadPlayListsService>();
         }
     }
 }

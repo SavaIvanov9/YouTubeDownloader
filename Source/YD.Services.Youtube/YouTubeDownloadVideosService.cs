@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using YD.Common.Contracts;
-using YD.Common.Extentions;
 using YD.Services.Abstraction;
 using YD.Services.Abstraction.UI;
 using YD.Services.Abstraction.Youtube;
@@ -28,13 +25,8 @@ namespace YD.Services.Youtube
         {
         }
 
-        public override string Name => "Youtube download files";
+        public override string Name => "Youtube download videos";
         protected override string LinksFileName => "youtube-links-to-download.txt";
-
-        //public IYouTubeDownloadVideosService Clone()
-        //{
-        //    return this.DeepClone();
-        //}
 
         public void Dispose()
         {

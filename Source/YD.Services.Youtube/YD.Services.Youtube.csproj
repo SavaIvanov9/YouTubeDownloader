@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="BaseYoutubeDownloadService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="YouTubeDownloadPlayListsService.cs" />
     <Compile Include="YouTubeDownloadVideosService.cs" />
   </ItemGroup>
   <ItemGroup>

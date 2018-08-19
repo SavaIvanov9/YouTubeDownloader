@@ -9,13 +9,16 @@ namespace YD.Services.Core
 {
     public class CommandFactoryService : ICommandFactoryService
     {
-        //private readonly Func<Type, IEngineCommand> commandBuilder;
         private readonly IYouTubeDownloadVideosService youTubeDownloadVideosService;
+        private readonly IYouTubeDownloadPlayListsService youTubeDownloadPlayListsService;
         private ICommandRegister register;
 
-        public CommandFactoryService(IYouTubeDownloadVideosService youTubeDownloadVideosService)
+        public CommandFactoryService(
+            IYouTubeDownloadVideosService youTubeDownloadVideosService,
+            IYouTubeDownloadPlayListsService youTubeDownloadPlayListsService)
         {
             this.youTubeDownloadVideosService = youTubeDownloadVideosService;
+            this.youTubeDownloadPlayListsService = youTubeDownloadPlayListsService;
         }
 
         public ICommandRegister Register
@@ -49,13 +52,11 @@ namespace YD.Services.Core
             {
                 case EngineCommandType.DownloadVideos:
                     return (IEngineCommand)youTubeDownloadVideosService.Clone();
-                case EngineCommandType.DownloadPlaylist:
-                    return null;
+                case EngineCommandType.DownloadPlaylists:
+                    return (IEngineCommand)youTubeDownloadPlayListsService.Clone();
                 default:
                     throw new CommandNotImplementedException(selector);
             }
-            
-            //return commandBuilder.Invoke(commandInfo.CommanType);
         }
     }
 }
