@@ -18,7 +18,7 @@ namespace YD.ConsoleClient
                 .ExecuteOnExit(configuration.OnExit)
                 .Start(commandsRegister, true);
 
-            while (true)
+            while (configuration.IsRunning)
             {
                 engine.ProcessInput(Console.ReadLine());
             }

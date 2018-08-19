@@ -8,6 +8,18 @@ namespace YD.ConsoleClient
 {
     internal class ConsoleConfiguration
     {
+        private bool isRunning;
+
+        public ConsoleConfiguration()
+        {
+            isRunning = true;
+        }
+
+        public bool IsRunning => isRunning;
+        //{
+        //    get { return isRunning; }
+        //}
+
         public void OnStartup()
         {
             Console.Title = "Youtube downloader";
@@ -27,7 +39,8 @@ namespace YD.ConsoleClient
             Console.WriteLine("Youtube downloader terminated.", false);
             Console.WriteLine("Press any key to exit...", false);
             Console.ReadKey();
-            Environment.Exit(0);
+            //Environment.Exit(0);
+            isRunning = false;
         }
     }
 }

@@ -34,7 +34,7 @@ namespace YD.Core
             this.uiService = uiService;
             this.commandProcessor = commandProcessor;
             this.errorLogger = errorLogger;
-            
+
             isStarted = false;
             isWorkingAsync = false;
             exitCommand = "exit";
@@ -110,6 +110,11 @@ namespace YD.Core
                 return;
             }
 
+            ProcessCommandLine(commandLine);
+        }
+
+        private (string Command, string Params) FormatInput(string commandLine)
+        {
             string commandParams;
             var index = commandLine.IndexOf("-", StringComparison.Ordinal);
             string command;
@@ -125,9 +130,16 @@ namespace YD.Core
                 command = commandLine.Substring(0, commandLine.Length - commandParams.Length - 1);
             }
 
+            return (command, commandParams);
+        }
+
+        private async void ProcessCommandLine(string commandLine)
+        {
+            var commandParts = FormatInput(commandLine);
+
             try
             {
-                await ProcessCommand(command.Trim().ToLower(), commandParams, true);
+                await ProcessCommand(commandParts.Command.Trim().ToLower(), commandParts.Params, true);
             }
             catch (CommandNotImplementedException ex)
             {
