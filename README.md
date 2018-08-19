@@ -1,7 +1,7 @@
 # YouTube Downloader
 
 ## Description:
-Tool for downloading videos and playlists from YouTube and convert them in mp3 format if needed.
+Tool for downloading videos and playlists from YouTube and converting them in mp3 format if needed.
 I needed tool like this and I have decided to implement it for fun :) Currently it has console client interface. In future I will develop some
 shiny desktop, web and mobile versions.
 
